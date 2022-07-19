@@ -17,12 +17,12 @@ public:
 		else if (dp[n] != -1) return dp[n];
 
 		int index = n - 1;
-		int oneStep = abs(heights[index] - heights[index - 1]) + minEnergy(n - 1, heights, dp);
+		int jumpOne = abs(heights[index] - heights[index - 1]) + minEnergy(n - 1, heights, dp);
 
-		int twoStep = INT_MAX;
-		if (n > 2) twoStep = abs(heights[index] - heights[index - 2]) + minEnergy(n - 2, heights, dp);
+		int jumpTwo = INT_MAX;
+		if (n > 2) jumpTwo = abs(heights[index] - heights[index - 2]) + minEnergy(n - 2, heights, dp);
 
-		int ans = min(oneStep, twoStep);
+		int ans = min(jumpOne, jumpTwo);
 
 		return dp[n] = ans;
 	}

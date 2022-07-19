@@ -12,12 +12,13 @@ public:
 
 		for (int i = 2; i <= n; i++) {
 			int index = i - 1;
-			int oneStep = abs(heights[index] - heights[index - 1]) + dp[i - 1];
 
-			int twoStep = INT_MAX;
-			if (i > 2) twoStep = abs(heights[index] - heights[index - 2]) + dp[i - 2];
+			int jumpOne = abs(heights[index] - heights[index - 1]) + dp[i - 1];
 
-			dp[i] = min(oneStep, twoStep);
+			int jumpTwo = INT_MAX;
+			if (i > 2) jumpTwo = abs(heights[index] - heights[index - 2]) + dp[i - 2];
+
+			dp[i] = min(jumpOne, jumpTwo);
 		}
 
 		return dp[n];

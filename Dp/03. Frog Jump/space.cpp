@@ -9,22 +9,22 @@ public:
 
 	int frogJump(int n, vector <int> &heights) {
 
-		int oneStep = 0, twoStep = 0;
+		int prev1 = 0, prev2 = 0;
 		for (int i = 2; i <= n; i++) {
 			int index = i - 1;
 
-			int curr1 = abs(heights[index] - heights[index - 1]) + oneStep;
+			int jumpOne = abs(heights[index] - heights[index - 1]) + prev1;
 
-			int curr2 = INT_MAX;
-			if (i > 2) curr2 = abs(heights[index] - heights[index - 2]) + twoStep;
+			int jumpTwo = INT_MAX;
+			if (i > 2) jumpTwo = abs(heights[index] - heights[index - 2]) + prev2;
 
-			int curr = min(curr1, curr2);
+			int curr = min(jumpOne, jumpTwo);
 
-			twoStep = oneStep;
-			oneStep = curr;
+			prev2 = prev1;
+			prev1 = curr;
 		}
 
-		return oneStep;
+		return prev1;
 	}
 };
 
