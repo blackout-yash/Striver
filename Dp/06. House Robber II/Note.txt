@@ -1,0 +1,38 @@
+Wrong Approach 1:
+
+int maxMoney(int n, int k, vector <int> &nums, vector <int> &dp) {
+	if (n < 0) {
+		if (k == 2) return -nums[0];
+		else return 0;
+	} else if (dp[n] != -1) return dp[n];
+
+	bool flag = (n + 1 == nums.size() || !n);
+
+	if  (flag) k++;
+	int pick = nums[n] + maxMoney(n - 2, k, nums, dp);
+
+	if (flag) k--;
+	int nonPick = maxMoney(n - 1, k, nums, dp);
+
+	int ans = max(pick, nonPick);
+
+	return dp[n] = ans;
+}
+
+int rob(vector <int> &nums) {
+	int n = nums.size();
+	vector <int> dp(n, -1);
+
+	int ans = maxMoney(n - 1, 0, nums, dp);
+
+	return ans;
+}
+
+Suppose we picked the last element of nums array.
+Now, if reached the 0th elements then it gets not included because we already picked the last element.
+Due to this, in 0th dp updated to the value 0 not with nums[0].
+
+But, suppose a condition in which we didn't picked the last element in this condition also the dp[0] going to return 0 because of above mentioned reason. 
+
+
+Solution: dp[n][k]
