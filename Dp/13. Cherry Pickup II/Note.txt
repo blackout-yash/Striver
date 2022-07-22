@@ -1,0 +1,18 @@
+Why 2d does not work?
+
+Approach
+First, we will find max cherry for robot 1(0, 0) and then, the cell visited by robot 1 for max cherry update it to 0, like backtracking.
+
+And, then we fill find max cherry for robot 2(0, col - 1).
+
+Reason
+Suppose at some row i, robot1 is at j1 and robot2 is at j2.
+
+         J1  j1  J2  j2  J3  
+i + 1    2   3   7    1   1
+
+So, acc to the approach robo 1 gonna take 7(i + 1, J2) in next step. Due, to this, robo 2 is bounded to take 1(i + 1, j2) or (i + 1, J3).
+
+But is this ideal condition? No.
+
+In ideal condition, robo1 takes 3(i + 1, j1) and then robo2 will take 7(i + 1, J2).
