@@ -1,0 +1,5 @@
+Try this because nums[i] can be zero which causes error in ans.
+
+Edge Case:
+(i) Zero at 0th index (Specially for table dp).
+(ii) Zero at anywhere.
