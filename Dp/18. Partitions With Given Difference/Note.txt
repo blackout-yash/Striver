@@ -1,0 +1,4 @@
+Find two condition, where ans is always 0.
+
+(i) sum <= diff 
+(ii) (sum - diff) & 1
