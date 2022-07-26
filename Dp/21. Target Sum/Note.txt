@@ -1,0 +1,18 @@
+MUST TRY PROBLEM WITH BOTH APPROACH
+
+Approach 1:
+what is the dimension of dp specially of column to handle negative num.
+
+It's tabular approach is imp.
+
+
+Approch 2;
+Let x & y be the pos and neg sum respectively.
+
+x - y = tar
+x + y = sum
+
+y = (sum - tar) / 2
+
+if(tar > sum) return 0;
+else if((sum - tar) & 1) return 0;
