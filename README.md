@@ -7,3 +7,4 @@
 18. Partitions With Given Difference - https://github.com/blackout-yash/Striver/blob/main/Dp/18.%20Partitions%20With%20Given%20Difference/Note.txt
 19. 0 1 Knapsack - https://github.com/blackout-yash/Striver/blob/main/Dp/19.%200%201%20Knapsack/Note.txt
 20. Coin Change - https://github.com/blackout-yash/Striver/blob/main/Dp/20.%20Coin%20Change/Note.txt
+21. Target Sum - https://github.com/blackout-yash/Striver/blob/main/Dp/21.%20Target%20Sum/Note.txt
