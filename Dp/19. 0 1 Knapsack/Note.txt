@@ -1,0 +1,8 @@
+ans not always in dp[n - 1][maxWeight].
+
+int ans = 0;
+for (auto x : dp[n - 1]) ans = max(ans, x);
+
+to remove this, we can use following conditons.
+if(i == 0 && j >= weight[0]) dp[0][j] = value[0] in place of
+if(i == 0 && j == weight[0]) dp[0][j] = value[0].
