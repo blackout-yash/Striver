@@ -1,0 +1,11 @@
+Tabular Dp
+
+In leetcode, no where is mention to use mod, but, it will give runtime error without mod in tabular dp. 
+
+But, why it passes the testcase if there no mention of mod, still we are using the mod?
+
+The answer line lie in the line "The test cases are generated so that the answer fits on a 32-bit signed integer.".
+
+This lines clearly tells that the dp state which gonna affect the answer must fits on a 32-bit signed integer.
+
+The overflow condition occurs in those dp states which not gonna affect the answer.
