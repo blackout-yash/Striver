@@ -8,4 +8,4 @@ The answer line lie in the line "The test cases are generated so that the answer
 
 This lines clearly tells that the dp state which gonna affect the answer must fits on a 32-bit signed integer.
 
-The overflow condition occurs in those dp states which not gonna affect the answer.
+The overflow condition only occurs in those dp states which not gonna affect the answer.
