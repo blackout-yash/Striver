@@ -9,3 +9,4 @@
 20. Coin Change - https://github.com/blackout-yash/Striver/blob/main/Dp/20.%20Coin%20Change/Note.txt
 21. Target Sum - https://github.com/blackout-yash/Striver/blob/main/Dp/21.%20Target%20Sum/Note.txt
 32. Distinct Subsequences - https://github.com/blackout-yash/Striver/blob/main/Dp/32.%20Distinct%20Subsequences/Note.txt
+36. Best Time to Buy and Sell Stock II - https://github.com/blackout-yash/Striver/blob/main/Dp/36.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20II/Note.txt
