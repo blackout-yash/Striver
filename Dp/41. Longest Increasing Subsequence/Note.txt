@@ -1,0 +1,5 @@
+samaj nahi aaya ki jab tabulation => top down mein space optimise kaise hoga => becoz isme dp state sirf previous row par hi nahi balki col par bhi depend kar raha tha....
+
+badhiya question => go through all tabular dp
+
+so tabulation => bottom up mein space optimise
