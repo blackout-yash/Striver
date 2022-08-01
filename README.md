@@ -11,3 +11,4 @@
 32. Distinct Subsequences - https://github.com/blackout-yash/Striver/blob/main/Dp/32.%20Distinct%20Subsequences/Note.txt
 36. Best Time to Buy and Sell Stock II - https://github.com/blackout-yash/Striver/blob/main/Dp/36.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20II/Note.txt
 41. Longest Increasing Subsequence - https://github.com/blackout-yash/Striver/blob/main/Dp/41.%20Longest%20Increasing%20Subsequence/Note.txt
+55. Maximal Rectangle - https://github.com/blackout-yash/Striver/tree/main/Dp/55.%20Maximal%20Rectangle/Prerequisites
