@@ -6,6 +6,44 @@
 // Approach I
 class Solution {
 public:
+	vector<vector<int>> verticalTraversal(TreeNode* root) {
+		vector <vector<int>> ans;
+		if (root == NULL) return ans;
+
+		map < int, map <int, multiset <int>>> store;
+		queue < pair<TreeNode*, pair<int, int>>> q;
+		q.push({root, {0, 0}});
+
+		while (!q.empty()) {
+			auto curr = q.front();
+			q.pop();
+
+			TreeNode *node = curr.first;
+			int x = curr.second.first, y = curr.second.second;
+
+			store[x][y].insert(node -> val);
+
+			if (node -> left != NULL) q.push({node -> left, {x - 1, y + 1}});
+			if (node -> right != NULL) q.push({node -> right, {x + 1, y + 1}});
+		}
+
+		for (auto x : store) {
+			vector <int> level;
+			for (auto y : x.second) {
+				for (auto z : y.second) level.push_back(z);
+			} ans.push_back(level);
+		}
+
+		return ans;
+	}
+};
+
+
+
+
+// Approach II
+class Solution {
+public:
 	void verticalTraversal(int col, int row, TreeNode *root, vector <pair<pair<int, int>, int>> &store) {
 		if (root == NULL) return;
 		else store.push_back({{col, row}, root -> val});
