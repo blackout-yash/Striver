@@ -6,6 +6,11 @@
 // Initialization
 // Trie T;
 // Not, Trie T = new Trie();
+
+// Calling
+// T.insert("yash");
+// T -> insert("yash");
+
 class Node {
 public:
 	Node* links[26];
