@@ -48,7 +48,7 @@ public:
 		node -> setEnd();
 	}
 
-	bool search(string word) {
+	bool searchWord(string &word) {
 		Node* node = root;
 		for (auto x : word) {
 			if (node -> containKey(x) == false) return false;
@@ -57,7 +57,7 @@ public:
 		return node -> isEnd();
 	}
 
-	bool startsWith(string prefix) {
+	bool searchPrefix(string prefix) {
 		Node* node = root;
 		for (auto x : prefix) {
 			if (node -> containKey(x) == false) return false;
