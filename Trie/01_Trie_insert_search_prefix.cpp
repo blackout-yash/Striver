@@ -3,6 +3,9 @@
 
 
 
+// Initialization
+// Trie T;
+// Not, Trie T = new Trie();
 class Node {
 public:
 	Node* links[26];
