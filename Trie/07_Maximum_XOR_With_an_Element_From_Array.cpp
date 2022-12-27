@@ -61,19 +61,6 @@ public:
 	}
 };
 
-struct hash_pair {
-	template <class T1, class T2>
-	size_t operator()(const pair<T1, T2>& p) const {
-		auto hash1 = hash<T1> {}(p.first);
-		auto hash2 = hash<T2> {}(p.second);
-
-		if (hash1 != hash2) {
-			return hash1 ^ hash2;
-		}
-		return hash1;
-	}
-};
-
 class Solution {
 public:
 	vector<int> maximizeXor(vector <int> &nums, vector<vector<int>> &queries) {
@@ -86,7 +73,6 @@ public:
 		sort(nums.begin(), nums.end());
 
 		Trie T;
-
 		int j = 0;
 		vector <int> ans(m);
 		for (int i = 0; i < m; i++) {
@@ -99,11 +85,9 @@ public:
 					j++;
 				} else break;
 			}
-
 			if (j) ans[ind] = T.maxXor(x);
 			else ans[ind] = -1;
 		}
-
 		return ans;
 	}
 };
