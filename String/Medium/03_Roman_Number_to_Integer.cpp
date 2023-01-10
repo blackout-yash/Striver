@@ -3,8 +3,6 @@
 
 
 
-//User function template for C++
-
 class Solution {
 public:
 	int romanToDecimal(string &s) {
