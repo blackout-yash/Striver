@@ -3,7 +3,7 @@
 
 
 
-// Approah I: 1 Stack
+// Approah I: 1 Queue
 class MyStack {
 public:
 	queue <int> q;
@@ -35,7 +35,7 @@ public:
 
 
 
-// Approah I: 2 Stack
+// Approah I: 2 Queues
 class MyStack {
 public:
 	queue <int> q1, q2;
